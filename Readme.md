@@ -1,6 +1,6 @@
 # BookIt: Experiences & Slots 🎟️
 
-A fullstack web application to explore, book, and confirm exciting travel experiences — built as part of Fullstack Intern Assignment.
+A fullstack web application to explore, book, and confirm exciting travel experiences.
 
 ## 🚀 Tech Stack
 **Frontend:** Next.js + TypeScript + TailwindCSS  
