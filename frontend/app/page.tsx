@@ -17,8 +17,8 @@ export default function Home() {
       try {
         
         const url = q
-          ? `http://localhost:5000/api/experiences?q=${encodeURIComponent(q)}`
-          : "http://localhost:5000/api/experiences";
+          ? `https://bookit-experiences-slots-1.onrender.com/api/experiences?q=${encodeURIComponent(q)}`
+          : "https://bookit-experiences-slots-1.onrender.com/api/experiences";
 
         const res = await fetch(url);
         const data = await res.json();

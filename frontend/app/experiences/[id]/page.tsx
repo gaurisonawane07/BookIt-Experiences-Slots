@@ -18,7 +18,7 @@ export default function ExperienceDetails() {
   useEffect(() => {
     const fetchExperience = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/experiences/${id}`);
+        const res = await fetch(`https://bookit-experiences-slots-1.onrender.com/api/experiences/${id}`);
         const data = await res.json();
         setExperience(data);
       } catch (err) {

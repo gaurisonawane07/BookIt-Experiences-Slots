@@ -22,7 +22,7 @@ export default function CheckoutPage() {
   useEffect(() => {
     const fetchExp = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/experiences/${expId}`);
+        const res = await fetch(`https://bookit-experiences-slots-1.onrender.com/api/experiences/${expId}`);
         const data = await res.json();
         setExp(data);
 
@@ -50,7 +50,7 @@ export default function CheckoutPage() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/promo/validate", {
+      const res = await fetch("https://bookit-experiences-slots-1.onrender.com/api/promo/validate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code: form.promo }),
@@ -87,7 +87,7 @@ export default function CheckoutPage() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/bookings", {
+      const res = await fetch("https://bookit-experiences-slots-1.onrender.com/api/bookings", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

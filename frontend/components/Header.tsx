@@ -22,7 +22,7 @@ export default function Header() {
     clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/experiences?q=${encodeURIComponent(q)}`);
+        const res = await fetch(`https://bookit-experiences-slots-1.onrender.com/api/experiences?q=${encodeURIComponent(q)}`);
         const data = await res.json();
         setSuggestions(data);
         setShowDropdown(true);

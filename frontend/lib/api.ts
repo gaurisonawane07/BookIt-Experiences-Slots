@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "https://bookit-experiences-slots-1.onrender.com/api";
 
 export async function getExperiences() {
   const res = await fetch(`${BASE_URL}/experiences`);
