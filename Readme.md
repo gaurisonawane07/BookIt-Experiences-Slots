@@ -74,5 +74,5 @@ npm run dev
 
 
 ## 🚀 Deployment
-- Frontend: [Vercel link]
-- Backend: [Render link]
+- Frontend: [[Vercel link](https://book-it-experiences-slots-x7x7.vercel.app/)]
+- Backend: [[Render link](https://bookit-experiences-slots-1.onrender.com/api)]
