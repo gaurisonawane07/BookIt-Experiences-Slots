@@ -12,25 +12,29 @@ export default function HomeContent() {
   const q = searchParams.get("q") || ""; 
 
   useEffect(() => {
+    let isMounted = true;
     const fetchData = async () => {
       setLoading(true);
       try {
         
         const url = q
           ? `https://bookit-experiences-slots-1.onrender.com/api/experiences?q=${encodeURIComponent(q)}`
-          : "https://bookit-experiences-slots-1.onrender.com/api/experiences";
+          : `https://bookit-experiences-slots-1.onrender.com/api/experiences`;
 
         const res = await fetch(url);
         const data = await res.json();
-        setExperiences(data);
+        if (isMounted) setExperiences(data);
       } catch (err) {
         console.error("Error fetching experiences:", err);
       } finally {
-        setLoading(false);
-      }
+      if (isMounted) setLoading(false);
+    }
     };
 
     fetchData();
+    return () => {
+    isMounted = false; 
+  };
   }, [q]); 
 
   return (

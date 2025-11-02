@@ -15,12 +15,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="min-h-screen flex flex-col bg-white text-neutral-900">
         <Header />
-        <main className="flex-1">{children}</main>
+        <Suspense fallback={<div className="text-center mt-10 text-gray-600">Loading...</div>}>
+          <main className="flex-1">{children}</main>
+        </Suspense>
         <Footer />
         <ToastContainer position="top-center" theme="colored" />
-        <Suspense>
-          {children}
-        </Suspense>
       </body>
     </html>
   );
